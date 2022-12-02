@@ -16,13 +16,13 @@ import (
 	"image/color"
 	"image/draw"
 
-	"periph.io/x/periph/conn"
-	"periph.io/x/periph/conn/display"
-	"periph.io/x/periph/conn/gpio"
-	"periph.io/x/periph/conn/i2c"
-	"periph.io/x/periph/conn/physic"
-	"periph.io/x/periph/conn/spi"
-	"periph.io/x/periph/devices/ssd1306/image1bit"
+	"periph.io/x/conn/v3"
+	"periph.io/x/conn/v3/display"
+	"periph.io/x/conn/v3/gpio"
+	"periph.io/x/conn/v3/i2c"
+	"periph.io/x/conn/v3/physic"
+	"periph.io/x/conn/v3/spi"
+	"periph.io/x/devices/v3/ssd1306/image1bit"
 )
 
 // FrameRate determines scrolling speed.
@@ -81,7 +81,7 @@ type Opts struct {
 // The SSD1306 can operate at up to 3.3Mhz, which is much higher than I²C. This
 // permits higher refresh rates.
 //
-// Wiring
+// # Wiring
 //
 // Connect SDA to SPI_MOSI, SCK to SPI_CLK, CS to SPI_CS.
 //
